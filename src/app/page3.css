@@ -1,0 +1,175 @@
+/* Page.css */
+
+/* Estilos generales */
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  background: linear-gradient(135deg, #f7e4ff 25%, #b3c0e0 100%);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.Page {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sección "Sobre Mí" */
+.About {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.About h2 {
+  font-size: 2.2rem;
+  color: #7e5bb7;
+  margin-bottom: 10px;
+}
+
+.About img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 5px solid #7e5bb7;
+  box-shadow: 0px 5px 15px rgba(126, 91, 183, 0.5);
+  transition: transform 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Efecto de hover en imagen de perfil */
+.About img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Fondo decorativo detrás de la imagen de perfil */
+.About::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #7e5bb7, transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Texto de la sección */
+.About p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #555;
+  z-index: 1;
+  position: relative;
+}
+
+/* Sección de Proyectos */
+.Projects {
+  text-align: center;
+}
+
+.Projects h2 {
+  font-size: 2rem;
+  color: #7e5bb7;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjetas de proyectos */
+.project {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: fadeIn 1.2s ease;
+}
+
+.project img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.project h3 {
+  color: #7e5bb7;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.project p, .project a {
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hover en tarjetas de proyectos */
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project img:hover {
+  transform: scale(1.05);
+}
+
+/* Botones y animación de enlace */
+.project a {
+  display: block;
+  margin-top: 10px;
+  color: #7e5bb7;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.project a:hover {
+  color: #aa78e3;
+}
+
+/* Mejora en responsividad */
+@media (max-width: 768px) {
+  .About, .project {
+    margin-bottom: 15px;
+  }
+
+  .About img {
+    width: 100px;
+    height: 100px;
+  }
+}

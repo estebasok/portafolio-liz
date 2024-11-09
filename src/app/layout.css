@@ -1,0 +1,19 @@
+/* src/components/Layout.css */
+
+.Layout-header {
+  background-color: #282c34;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Layout-content {
+  padding: 2rem;
+}
+
+.Layout-footer {
+  padding: 1rem;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+}

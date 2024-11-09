@@ -1,0 +1,54 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #121212;
+    border-bottom: 2px solid #007acc;
+  }
+  
+  .navbar-logo img {
+    height: 30px; /* Ajusta el tamaño de tu logo */
+  }
+  
+  /* Enlaces de la navbar */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links li a:hover {
+    color: #007acc;
+  }
+  
+  /* Barra de búsqueda */
+  .navbar-search input {
+    padding: 8px 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    width: 150px;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-search input::placeholder {
+    color: #aaa;
+  }
+  
+  .navbar-search input:focus {
+    width: 200px;
+    outline: none;
+  }
+  

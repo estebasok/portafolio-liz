@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #1f1f1f; 
+    --secondary-color: #282828; 
+      --highlight-color: #8be9fd;
+      --text-color: #f8f8f2;
+      --accent-color: #50fa7b;
+      --error-color: #ff5555;
+      --transition-time: 0.3s;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+    }
+    
+    .Page {
+      padding: 2rem;
+      max-width: 1200px; /* Ajustado para que se vean bien las tres columnas */
+      margin: 0 auto;
+    }
+    
+    /* Animación de fade-in para todas las secciones */
+    section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background-color: var(--secondary-color);
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+    
+    /* Fade-in keyframes */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Animación de cambio de color en los títulos */
+    h2 {
+      font-size: 2.5rem; /* Tamaño de encabezado aumentado */
+      margin-bottom: 1rem;
+      color: var(--highlight-color);
+      transition: color var(--transition-time);
+    }
+    
+    h2:hover {
+      color: var(--accent-color);
+    }
+    
+    /* Sobre Mí */
+    .About p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--text-color);
+      transition: color var(--transition-time);
+    }
+    
+    .About p:hover {
+      color: var(--highlight-color);
+    }
+    
+    /* Proyectos */
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    
+    .project {
+      width: calc(33.33% - 1rem); /* Columnas de a 3 */
+      background-color: #44475a;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    
+    .project img {
+      width: 100%;
+      border-radius: 4px;
+      transition: transform var(--transition-time);
+    }
+    
+    .project h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.4rem;
+      color: var(--accent-color);
+    }
+    
+    .project p {
+      color: #f8f8f2;
+    }
+    
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 20px rgba(80, 250, 123, 0.3);
+    }
+    
+    .project:hover img {
+      transform: scale(1.1);
+    }
+    
+    /* Contacto */
+    .Contact p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-btn {
+      padding: 0.8rem 1.5rem;
+      background-color: var(--error-color);
+      color: var(--text-color);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color var(--transition-time), transform var(--transition-time);
+    }
+    
+    .contact-btn:hover {
+      background-color: var(--highlight-color);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(139, 233, 253, 0.3);
+    }
+    
+    .contact-btn:active {
+      transform: translateY(1px);
+    }
+    
+    /* Animación de desvanecido en el hover */
+    .contact-btn:hover::after {
+      content: ' ¡Vamos!';
+      color: var(--accent-color);
+      transition: color 0.3s ease-in;
+    }
+    
